@@ -6,7 +6,7 @@ namespace HomeWorkNumber1
 {
     class Program
     {
-
+        //
         #region Задание №1
         static MyFunctions.PersonStruct HelloMan(bool printResult = true)
         {
@@ -23,7 +23,7 @@ namespace HomeWorkNumber1
             {
                 Console.WriteLine($"Здравствуй, {person.surName}, {person.name}! Ваш вес - {person.weight:f2} кг., при росте - {person.height:f2} см. и возрасте {person.years:f1} лет!");
             }
-
+            
             return person;
 
         }
