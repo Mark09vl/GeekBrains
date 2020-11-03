@@ -56,6 +56,11 @@ namespace HomeWorkNumber3
 
         public Fraction(int numerator, int denominator)
         {
+            if (denominator == 0)
+            {
+                throw new ArgumentException("Знаменатель не может быть равен 0");
+            }
+
             this.numerator = numerator;
             this.denominator = denominator;
             this.decimalValue = DemicalValue();
@@ -253,10 +258,10 @@ namespace HomeWorkNumber3
         static void FractionValue()
         {
             int ax = Convert.ToInt32(MyFunctions.GetValue("Введите числитель первой дроби: ", true));
-            int ay = Convert.ToInt32(MyFunctions.GetValue("Введите знаменатель первой дроби: ", true, 1));
+            int ay = Convert.ToInt32(MyFunctions.GetValue("Введите знаменатель первой дроби: ", true));
 
             int bx = Convert.ToInt32(MyFunctions.GetValue("Введите числитель второй дроби: ", true));
-            int by = Convert.ToInt32(MyFunctions.GetValue("Введите знаменатель первой дроби: ", true, 1));
+            int by = Convert.ToInt32(MyFunctions.GetValue("Введите знаменатель первой дроби: ", true));
 
             Console.Clear();
 
