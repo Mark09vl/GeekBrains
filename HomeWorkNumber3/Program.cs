@@ -253,10 +253,10 @@ namespace HomeWorkNumber3
         static void FractionValue()
         {
             int ax = Convert.ToInt32(MyFunctions.GetValue("Введите числитель первой дроби: ", true));
-            int ay = Convert.ToInt32(MyFunctions.GetValue("Введите знаменатель первой дроби: ", true));
+            int ay = Convert.ToInt32(MyFunctions.GetValue("Введите знаменатель первой дроби: ", true, 1));
 
             int bx = Convert.ToInt32(MyFunctions.GetValue("Введите числитель второй дроби: ", true));
-            int by = Convert.ToInt32(MyFunctions.GetValue("Введите знаменатель первой дроби: ", true));
+            int by = Convert.ToInt32(MyFunctions.GetValue("Введите знаменатель первой дроби: ", true, 1));
 
             Console.Clear();
 
@@ -322,8 +322,7 @@ namespace HomeWorkNumber3
                 else if (numbetTask == 3)
                 {
                     Console.WriteLine("Задание №3:\n" +
-                                        "С клавиатуры вводятся числа, пока не будет введен 0.\n" +
-                                        "Подсчитать сумму всех нечетных положительных чисел.\n");
+                                        "Класс дробей \n");
                     FractionValue();
                 }
                 
