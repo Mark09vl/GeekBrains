@@ -4,6 +4,91 @@ using System.Linq;
 
 namespace MyHelper
 {
+
+    #region Работа с массивами
+    public class MyArray
+    {
+        private int[] arr;
+        
+        public MyArray(int size, int min, int max, int step)
+        {
+            arr = new int[size];
+            int count = min;
+            for (int i = 0; i < size; i++)
+            {
+                arr[i] = count;
+                if (count < max)
+                {
+                    count += step;
+                    if (count > max)
+                    {
+                        count -= (count - max);
+                    }
+                }
+            }    
+        }
+
+        public int Sum()
+        {
+            int count = 0;
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                count += arr[i];
+            }
+            return count;
+        }
+
+        public void Inverse()
+        {
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                arr[i] = -1 * arr[i];
+            }
+        }
+
+        public int Multi(int value)
+        {
+            int count = 0;
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                count += arr[i] * value;
+            }
+            return count;
+        }
+
+        public int MaxCount()
+        {
+            int max = arr[0];
+            for (int i = 1; i < arr.Length; i++)
+            {
+                if (max < arr[i])
+                {
+                    max = arr[i];
+                }
+            }
+
+            var count = 0;
+
+            foreach (var current in arr)
+            {
+                if (current == max)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        public string ToString()
+        {
+            string stringarray = "";
+            foreach (int x in arr)
+                stringarray = stringarray + x + " ";
+            return stringarray;
+        }
+    }
+    #endregion
+
     public class MyFunctions
     {
 
@@ -71,6 +156,10 @@ namespace MyHelper
             return value.ToString().Trim(del).Length;
         }
         #endregion
+
+        
+
+
 
         //Расчет расстояния между точками
         public static double GetDistance(double x1, double y1, double x2, double y2)

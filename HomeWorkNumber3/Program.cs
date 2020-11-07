@@ -39,7 +39,7 @@ namespace HomeWorkNumber3
             return x3;
         }
 
-        public string ToString()
+        override public string ToString()
         {
             return (re == 0 ? "" : Convert.ToString(re)) + (im < 0 || re == 0 ? "" : "+") + (im == 0 ? "" : Convert.ToString(im) + "i");
         }
@@ -71,7 +71,7 @@ namespace HomeWorkNumber3
             return numerator / denominator;
         }
 
-        public string ToString()
+        override public string ToString()
         {
             return $"({numerator:f2}".TrimEnd('0').TrimEnd(',') + $"/{denominator:f2}".TrimEnd('0').TrimEnd(',') + ")";
         }
