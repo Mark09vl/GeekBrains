@@ -197,10 +197,10 @@ namespace HomeWorkNumber3
 
             Complex result;
 
-            int numbetCaseTask = Convert.ToInt32(MyFunctions.GetValue("1) Сумма комплексных числел;\n" +
+            int numbetCaseTask = Convert.ToInt32(MyFunctions.GetDouble("1) Сумма комплексных числел;\n" +
                                                                         "2) Разность комплексных числел;\n" +
                                                                         "3) Произведение комплексных чисел.\n\n" +
-                                                                        "Введите номер варианта задания(1-3): ", true, 1, 3));
+                                                                        "Введите номер варианта задания(1-3): ", true, 1, 3, true, true));
 
             Console.Clear();
 
@@ -235,7 +235,7 @@ namespace HomeWorkNumber3
             {
                 i++;
                 Array.Resize(ref myArray, i);
-                myArray[i - 1] = MyFunctions.GetValue($"Введите число номер {i}: ");
+                myArray[i - 1] = MyFunctions.GetDouble($"Введите число номер {i}: ");
                 if (myArray[i - 1] == 0)
                 {
                     break;
@@ -257,11 +257,11 @@ namespace HomeWorkNumber3
         #region Задание №3
         static void FractionValue()
         {
-            int ax = Convert.ToInt32(MyFunctions.GetValue("Введите числитель первой дроби: ", true));
-            int ay = Convert.ToInt32(MyFunctions.GetValue("Введите знаменатель первой дроби: ", true));
+            int ax = Convert.ToInt32(MyFunctions.GetDouble("Введите числитель первой дроби: ", true));
+            int ay = Convert.ToInt32(MyFunctions.GetDouble("Введите знаменатель первой дроби: ", true));
 
-            int bx = Convert.ToInt32(MyFunctions.GetValue("Введите числитель второй дроби: ", true));
-            int by = Convert.ToInt32(MyFunctions.GetValue("Введите знаменатель первой дроби: ", true));
+            int bx = Convert.ToInt32(MyFunctions.GetDouble("Введите числитель второй дроби: ", true));
+            int by = Convert.ToInt32(MyFunctions.GetDouble("Введите знаменатель первой дроби: ", true));
 
             Console.Clear();
 
@@ -270,11 +270,11 @@ namespace HomeWorkNumber3
 
             Fraction c;
 
-            int numbetCaseTask = Convert.ToInt32(MyFunctions.GetValue("1) Сумма дробных числел;\n" +
+            int numbetCaseTask = Convert.ToInt32(MyFunctions.GetDouble("1) Сумма дробных числел;\n" +
                                                                         "2) Разность дробных числел;\n" +
                                                                         "3) Произведение дробных чисел.\n" +
                                                                         "4) Деление дробных чисел.\n\n" +
-                                                                        "Введите номер варианта задания(1-4): ", true, 1, 4));
+                                                                        "Введите номер варианта задания(1-4): ", true, 1, 4, true, true));
 
             Console.Clear();
 
@@ -307,7 +307,7 @@ namespace HomeWorkNumber3
             {
                 Console.Clear();
 
-                int numbetTask = Convert.ToInt32(MyFunctions.GetValue("Введите номер задания(1-3): ", true, 1, 3));
+                int numbetTask = Convert.ToInt32(MyFunctions.GetDouble("Введите номер задания(1-3): ", true, 1, 3, true, true));
 
                 Console.Clear();
 

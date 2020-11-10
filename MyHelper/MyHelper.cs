@@ -1,6 +1,7 @@
 ﻿//Коротких М.А.
 using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace MyHelper
 {
@@ -106,27 +107,58 @@ namespace MyHelper
 
         #region  Функции возвращающие значение введенное пользователем 
         //Задает вопрос и возвращает переменную типа double. Проверяет на некорректное значение
-        public static double GetValue(string massege, bool thisIsInt = false, double minRange = 0.0000000999, double maxRange = 0.0000000999) //С minRange и maxRange - это костыль. Не нашел альтернативы 
+        public static double GetDouble(string massege, bool thisIsInt = false, double minRange = 0, double maxRange = 0, bool sizeMin = false, bool sizeMax = false) 
         {
             Console.Write(massege);
 
             bool tryOk = Double.TryParse(Console.ReadLine(), out double result);
 
-            if ((minRange != 0.0000000999 && result < minRange) || (maxRange != 0.0000000999 && result > maxRange) || (thisIsInt && result != Math.Truncate(result)) || !tryOk)
+            if ((sizeMin == true && result < minRange) 
+                || (sizeMax == true && result > maxRange) 
+                || (thisIsInt && result != Math.Truncate(result)) || !tryOk)
             {
                 Console.WriteLine("\nВведено некорректное значение!");
-                result = GetValue(massege, thisIsInt, minRange, maxRange);
+                result = GetDouble(massege, thisIsInt, minRange, maxRange, sizeMin, sizeMax);
             }
 
             return result;
         }
 
         //Задает вопрос и возвращает переменную типа string
-        public static string GetString(string massege)
+        public static string GetString(string massege, int min = 0, int max = 0, bool sizeMin = false, bool sizeMax = false)
         {
-            Console.Write(massege);
+            string result;
 
-            return Console.ReadLine();
+            while (true)
+            {
+                Console.Write(massege);
+                result = Console.ReadLine();
+                if ((sizeMin == true && result.Length >= min) 
+                    || (sizeMax == true && result.Length <= max))
+                {
+                    break;
+                }
+                Console.WriteLine("\nВведено некорректное значение!");
+            }
+                
+            return result;
+        }
+
+        public static char GetChar(string massege)
+        {
+            char result;
+
+            while (true)
+            {
+                Console.Write(massege);
+                if (Char.TryParse(Console.ReadLine(), out result))
+                {
+                    break;
+                }
+                Console.WriteLine("\nВведено некорректное значение!");
+            }
+
+            return result;
         }
 
         //Задает вопрос и возвращает переменную типа bool
@@ -204,6 +236,17 @@ namespace MyHelper
         public static double GetMassFromGreatIndex(PersonStruct person, double greatIndexMass)
         {
             return greatIndexMass * (person.height / 100) * (person.height / 100);
+        }
+
+        public static bool CheckValidValue(string str, string mask)
+        {
+            return !string.IsNullOrEmpty(str) && !Regex.IsMatch(str, mask);
+        }
+
+        public static string[] ParseString(string text, string separators)
+        {
+            string[] words = text.Split(separators.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+            return words;
         }
 
         #region Мелочи

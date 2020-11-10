@@ -14,9 +14,9 @@ namespace HomeWorkNumber1
             {
                 name = MyFunctions.GetString("Введите ваше имя: "),
                 surName = MyFunctions.GetString("Введите вашу фамилию: "),
-                years = MyFunctions.GetValue("Введите ваш возраст(лет): ", false, 0.5),
-                height = MyFunctions.GetValue("Введите ваш рост(см): ", false, 0.5),
-                weight = MyFunctions.GetValue("Введите ваш вес(кг): ", false, 0.5)
+                years = MyFunctions.GetDouble("Введите ваш возраст(лет): ", false, 0.5, 0, true),
+                height = MyFunctions.GetDouble("Введите ваш рост(см): ", false, 0.5, 0, true),
+                weight = MyFunctions.GetDouble("Введите ваш вес(кг): ", false, 0.5, 0, true)
             };
 
             if (printResult == true)
@@ -42,10 +42,10 @@ namespace HomeWorkNumber1
         #region Задание №3
         static void DistancePoints()
         {
-            double x1 = MyFunctions.GetValue("Введите значение x1: ", false, 0);
-            double y1 = MyFunctions.GetValue("Введите значение y1: ", false, 0);
-            double x2 = MyFunctions.GetValue("Введите значение x2: ", false, 0);
-            double y2 = MyFunctions.GetValue("Введите значение y2: ", false, 0);
+            double x1 = MyFunctions.GetDouble("Введите значение x1: ", false, 0, 0, true);
+            double y1 = MyFunctions.GetDouble("Введите значение y1: ", false, 0, 0, true);
+            double x2 = MyFunctions.GetDouble("Введите значение x2: ", false, 0, 0, true);
+            double y2 = MyFunctions.GetDouble("Введите значение y2: ", false, 0, 0, true);
 
             Console.WriteLine($"Расстояние между точками равно - {MyFunctions.GetDistance(x1, y1, x2, y2):f2}");
         }
@@ -97,7 +97,7 @@ namespace HomeWorkNumber1
                 //Чистим от ненужного мусора
                 Console.Clear();
 
-                int numbetTask = Convert.ToInt32(MyFunctions.GetValue("Введите номер задания(1-5): ", true, 1, 5));
+                int numbetTask = Convert.ToInt32(MyFunctions.GetDouble("Введите номер задания(1-5): ", true, 1, 5, true, true));
 
                 //Чистим консоль для красоты
                 Console.Clear();

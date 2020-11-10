@@ -11,13 +11,13 @@ namespace HomeWorkNumber2
         #region Задание №1
         static void MinValue()
         {
-            int maxValues = Convert.ToInt32(MyFunctions.GetValue("Введите количество чисел: ", true, 1));
+            int maxValues = Convert.ToInt32(MyFunctions.GetDouble("Введите количество чисел: ", true, 1, 0, true));
 
             double[] myArray = new double[maxValues];
 
             for (int i = 0; i < myArray.Length; i++)
             {
-                myArray[i] = MyFunctions.GetValue($"Введите чисело номер {i + 1}: ");
+                myArray[i] = MyFunctions.GetDouble($"Введите чисело номер {i + 1}: ");
             }
 
             Console.WriteLine($"Минимальное число - {MyFunctions.GetMinArray(myArray)}");
@@ -27,7 +27,7 @@ namespace HomeWorkNumber2
         #region Задание №2
         static void LengthValue()
         {
-            double value = MyFunctions.GetValue("Введите число для подсчета символов: ");
+            double value = MyFunctions.GetDouble("Введите число для подсчета символов: ");
             Console.WriteLine($"Количество символов в числе - {MyFunctions.GetLengthValue(value, new char[] { ',', '.' })}");
         }
         #endregion
@@ -42,7 +42,7 @@ namespace HomeWorkNumber2
             {
                 i++;
                 Array.Resize(ref myArray, i);
-                myArray[i - 1] = MyFunctions.GetValue($"Введите число номер {i}: ");
+                myArray[i - 1] = MyFunctions.GetDouble($"Введите число номер {i}: ");
                 if (myArray[i - 1] == 0)
                 {
                     break;
@@ -106,8 +106,8 @@ namespace HomeWorkNumber2
 
             MyFunctions.PersonStruct person = new MyFunctions.PersonStruct
             {
-                height = MyFunctions.GetValue("Введите ваш рост(см): ", false, 0.5),
-                weight = MyFunctions.GetValue("Введите ваш вес(кг): ", false, 0.5),
+                height = MyFunctions.GetDouble("Введите ваш рост(см): ", false, 0.5, 0, true),
+                weight = MyFunctions.GetDouble("Введите ваш вес(кг): ", false, 0.5, 0, true),
 
             };
 
@@ -194,7 +194,7 @@ namespace HomeWorkNumber2
                 //Чистим от ненужного мусора
                 Console.Clear();
 
-                int numbetTask = Convert.ToInt32(MyFunctions.GetValue("Введите номер задания(1-7): ", true, 1, 7));
+                int numbetTask = Convert.ToInt32(MyFunctions.GetDouble("Введите номер задания(1-7): ", true, 1, 7, true, true));
 
                 //Чистим консоль для красоты
                 Console.Clear();
@@ -249,8 +249,8 @@ namespace HomeWorkNumber2
                                         "a) Разработать рекурсивный метод, который выводит на экран числа от a до b(a<b).\n\n" +
                                         "б) * Разработать рекурсивный метод, который считает сумму чисел от a до b.\n");
                     int sumValue = 0;
-                    MagicValue(Convert.ToInt32(MyFunctions.GetValue("Введите первое число: ", true)),
-                                Convert.ToInt32(MyFunctions.GetValue("Введите последнее число: ", true)), ref sumValue);
+                    MagicValue(Convert.ToInt32(MyFunctions.GetDouble("Введите первое число: ", true)),
+                                Convert.ToInt32(MyFunctions.GetDouble("Введите последнее число: ", true)), ref sumValue);
                     Console.WriteLine($"Сумма чисел - {sumValue}");
                 }
 

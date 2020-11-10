@@ -121,9 +121,9 @@ namespace HomeWorkNumber4
         #region Задача №2
         static void LookForPairsForStaticClass()
         {
-            int numbetTask = Convert.ToInt32(MyFunctions.GetValue("1. Рандомный массив;\n" +
+            int numbetTask = Convert.ToInt32(MyFunctions.GetDouble("1. Рандомный массив;\n" +
                                                                     "2. Массив с файла input.txt в текущей директории.\n" +
-                                                                    "Выберите вариант исполнения(1-2): ", true, 1, 2));
+                                                                    "Выберите вариант исполнения(1-2): ", true, 1, 2, true, true));
 
             int[] myInStaticArray = new int[0];
 
@@ -158,7 +158,7 @@ namespace HomeWorkNumber4
             {
                 Console.Clear();
 
-                int numbetTask = Convert.ToInt32(MyFunctions.GetValue("Введите номер задания(1-3): ", true, 1, 3));
+                int numbetTask = Convert.ToInt32(MyFunctions.GetDouble("Введите номер задания(1-3): ", true, 1, 3, true, true));
 
                 Console.Clear();
 
