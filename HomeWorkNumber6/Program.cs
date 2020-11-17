@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿//Коротких М.А.
+
+using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 using System.Text;
 using MyHelper;

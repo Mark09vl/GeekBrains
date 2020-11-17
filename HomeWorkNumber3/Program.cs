@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Коротких М.А.
+
+using System;
 using MyHelper;
 
 namespace HomeWorkNumber3

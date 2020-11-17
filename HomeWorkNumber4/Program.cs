@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Коротких М.А.
+
+using System;
 using System.IO;
 using MyHelper;
 

@@ -1,4 +1,5 @@
 ﻿//Коротких М.А.
+
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -235,6 +236,14 @@ namespace MyHelper
         public static int GetLengthValue(double value, char[] del)
         {
             return value.ToString().Trim(del).Length;
+        }
+        public static int GetRandomValue(int minRange = 0, int maxRange = 0)
+        {
+            Random rnd = new Random();
+
+            int value = rnd.Next(minRange, maxRange);
+
+            return value;
         }
         #endregion
 
