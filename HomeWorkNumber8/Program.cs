@@ -3,7 +3,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace HomeWorkNumber7
+namespace HomeWorkNumber8
 {
     static class Program
     {

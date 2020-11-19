@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Students>
+  <StudentIndo>
+    <Name>Имя2</Name>
+    <Surname>Фамилия2</Surname>
+    <University>Наименование университета2</University>
+    <Faculty>Наименование факультета2</Faculty>
+    <Department>Наименование кафедры2</Department>
+    <Age>19</Age>
+    <Course>6</Course>
+    <Group>2</Group>
+    <City>Москва</City>
+  </StudentIndo>
+  <StudentIndo>
+    <Name>Имя3</Name>
+    <Surname>Фамилия3</Surname>
+    <University>Наименование университета3</University>
+    <Faculty>Наименование факультета3</Faculty>
+    <Department>Наименование кафедры3</Department>
+    <Age>20</Age>
+    <Course>6</Course>
+    <Group>2</Group>
+    <City>Москва</City>
+  </StudentIndo>
+  <StudentIndo>
+    <Name>Имя4</Name>
+    <Surname>Фамилия4</Surname>
+    <University>Наименование университета4</University>
+    <Faculty>Наименование факультета4</Faculty>
+    <Department>Наименование кафедры4</Department>
+    <Age>18</Age>
+    <Course>3</Course>
+    <Group>1</Group>
+    <City>Владивосток</City>
+  </StudentIndo>
+  <StudentIndo>
+    <Name>Имя5</Name>
+    <Surname>Фамилия5</Surname>
+    <University>Наименование университета5</University>
+    <Faculty>Наименование факультета5</Faculty>
+    <Department>Наименование кафедры5</Department>
+    <Age>21</Age>
+    <Course>5</Course>
+    <Group>1</Group>
+    <City>Владивосток</City>
+  </StudentIndo>
+</Students>
